@@ -1,0 +1,21 @@
+<ion-view view-title="{{feed.title}}">
+  <ion-content class="newsItemPages-content">
+	<div class="list card">
+
+	  <div class="item">
+	    <h2>{{feed.title}}</h2>
+	    <h6>{{feed.publishedDate}}</h6>
+	    <div><img src="{{feed.image}}" class="full-image"></div>
+	  </div>
+
+	  <div class="item item-body" >	    
+	     <p> {{feed.contentSnippet}}  </p>
+	  </div>
+	  <button class="button button-positive button-full button-outline" ng-click = "openLink(feed.link)">
+	  	Open page
+	  </button> 
+
+	</div>  
+	 
+  </ion-content>      
+</ion-view>

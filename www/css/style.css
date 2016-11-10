@@ -1,0 +1,30 @@
+.newsMainPage-content, .newsItemPages-content, .startPageContent{
+	/*background: grey;*/
+}
+
+.row{
+	padding: 0;
+    width: 101%;
+}
+ .col-50{
+	padding: 0;
+    /*border: none;*/
+ }
+
+.button-main-page{
+    width: 102%;
+    height: 23.4vh;
+    color: blue;
+    border: none;
+    /*background: grey;*/
+    font-size: 4vh;
+    padding-top:8vh;
+    text-align: center;
+}
+
+.item{
+    color: blue;
+}
+
+
+

@@ -1,0 +1,35 @@
+<ion-view view-title="Wiadomości" > 	
+	     	        
+	 <ion-nav-buttons side="right">       
+		<button class="button button-icon ion-android-search" 
+		  ng-click="showFilterBar()">
+		</button>
+      </ion-nav-buttons>       
+
+  	<ion-content class="newsMainPage-content">
+
+  		<ion-refresher
+			pulling-text="Pull to refresh..."
+			on-refresh="doRefresh()">
+ 		</ion-refresher>
+
+	    <ion-list>
+		    <ion-item 
+		    	ng-repeat = "feed in feeds | filter:query" 
+		    	href="#/app/newsItem/{{feed.title}}"
+		    	class = "item-text-wrap item-thumbnail-left item-icon-right "
+		    	item-height="12%" item-width="100%">
+		    		<img ng-src="{{ feed.image }}">		  
+			        <h2>{{feed.title}}</h2>
+			        <h6>{{feed.publishedDate}}</h6>
+			        <i class="icon ion-arrow-right-b"></i>
+			    <ion-option-button class="button-balanced" ng-click="share(feed.link)">
+			    	Share
+			    </ion-option-button>
+		    </ion-item>
+	    </ion-list>
+
+	</ion-content>
+</ion-view>
+
+
